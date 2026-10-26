@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "projectId": "prj_20261018_f44b09",
+  "clipIndex": 2,
+  "updatedAt": "2026-10-18T14:08:55+00:00",
+  "window": {
+    "start": 1970.0,
+    "end": 2000.0
+  },
+  "shots": [
+    {
+      "index": 1,
+      "start": 1970.0,
+      "end": 1977.85,
+      "duration": 7.85,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "auto",
+      "locked": false
+    },
+    {
+      "index": 2,
+      "start": 1977.85,
+      "end": 2000.0,
+      "duration": 22.15,
+      "kind": "whole_frame",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "manual",
+      "locked": false
+    }
+  ],
+  "summary": {
+    "shots": 2,
+    "cuts": 1,
+    "kinds": {
+      "follow_speaker": 1,
+      "whole_frame": 1
+    },
+    "manual": 1,
+    "locked": 0,
+    "duration": 30.0,
+    "avg_shot_seconds": 15.0,
+    "min_shot_seconds": 7.85
+  },
+  "note": "patch",
+  "past": [
+    [
+      {
+        "index": 1,
+        "start": 1970.0,
+        "end": 1977.85,
+        "duration": 7.85,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1977.85,
+        "end": 2000.0,
+        "duration": 22.15,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ]
+  ],
+  "future": []
+}

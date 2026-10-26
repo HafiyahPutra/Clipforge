@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "projectId": "prj_20261019_f70fb3",
+  "clipIndex": 0,
+  "updatedAt": "2026-10-19T04:19:31+00:00",
+  "window": {
+    "start": 1117.0,
+    "end": 1147.0
+  },
+  "state": {
+    "revision": 2,
+    "expected": null,
+    "groups": [
+      {
+        "id": "p1",
+        "letter": "A",
+        "label": "Person A",
+        "color": "#38bdf8",
+        "ignored": false,
+        "members": [
+          {
+            "track": "A",
+            "from": null,
+            "to": null
+          },
+          {
+            "track": "B",
+            "from": null,
+            "to": null
+          }
+        ],
+        "merged_from": [
+          "B"
+        ],
+        "split_from": null
+      }
+    ]
+  },
+  "summary": {
+    "people": 1,
+    "ignored": 0,
+    "merged": 1
+  },
+  "note": "Merged Person B into Person A",
+  "past": [
+    {
+      "revision": 1,
+      "expected": null,
+      "groups": [
+        {
+          "id": "p1",
+          "letter": "A",
+          "label": "Person A",
+          "color": "#38bdf8",
+          "ignored": false,
+          "members": [
+            {
+              "track": "A",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        },
+        {
+          "id": "p2",
+          "letter": "B",
+          "label": "Person B",
+          "color": "#f472b6",
+          "ignored": false,
+          "members": [
+            {
+              "track": "B",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        }
+      ]
+    }
+  ],
+  "future": []
+}

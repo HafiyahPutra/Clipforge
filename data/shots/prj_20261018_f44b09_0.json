@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "projectId": "prj_20261018_f44b09",
+  "clipIndex": 0,
+  "updatedAt": "2026-10-18T14:05:59+00:00",
+  "window": {
+    "start": 1097.0,
+    "end": 1127.0
+  },
+  "shots": [
+    {
+      "index": 1,
+      "start": 1097.0,
+      "end": 1102.28,
+      "duration": 5.28,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "manual",
+      "locked": false
+    },
+    {
+      "index": 2,
+      "start": 1102.28,
+      "end": 1107.55,
+      "duration": 5.27,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "manual",
+      "locked": false
+    },
+    {
+      "index": 3,
+      "start": 1107.55,
+      "end": 1127.0,
+      "duration": 19.45,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "auto",
+      "locked": false
+    }
+  ],
+  "summary": {
+    "shots": 3,
+    "cuts": 2,
+    "kinds": {
+      "follow_speaker": 3
+    },
+    "manual": 2,
+    "locked": 0,
+    "duration": 30.0,
+    "avg_shot_seconds": 10.0,
+    "min_shot_seconds": 5.27
+  },
+  "note": "patch",
+  "past": [
+    [
+      {
+        "index": 1,
+        "start": 1097.0,
+        "end": 1107.55,
+        "duration": 10.55,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1107.55,
+        "end": 1127.0,
+        "duration": 19.45,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "start": 1097.0,
+        "end": 1102.28,
+        "duration": 5.28,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "manual",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1102.28,
+        "end": 1107.55,
+        "duration": 5.27,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "manual",
+        "locked": false
+      },
+      {
+        "index": 3,
+        "start": 1107.55,
+        "end": 1127.0,
+        "duration": 19.45,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "start": 1097.0,
+        "end": 1102.28,
+        "duration": 5.28,
+        "kind": "follow_person",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "manual",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1102.28,
+        "end": 1107.55,
+        "duration": 5.27,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "manual",
+        "locked": false
+      },
+      {
+        "index": 3,
+        "start": 1107.55,
+        "end": 1127.0,
+        "duration": 19.45,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ]
+  ],
+  "future": []
+}

@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "projectId": "prj_20261018_f44b09",
+  "clipIndex": 1,
+  "updatedAt": "2026-10-18T14:07:49+00:00",
+  "window": {
+    "start": 1291.0,
+    "end": 1322.0
+  },
+  "shots": [
+    {
+      "index": 1,
+      "start": 1291.0,
+      "end": 1297.25,
+      "duration": 6.25,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "manual",
+      "locked": false
+    },
+    {
+      "index": 2,
+      "start": 1297.25,
+      "end": 1322.0,
+      "duration": 24.75,
+      "kind": "follow_speaker",
+      "person": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "auto",
+      "locked": false
+    }
+  ],
+  "summary": {
+    "shots": 2,
+    "cuts": 1,
+    "kinds": {
+      "follow_speaker": 2
+    },
+    "manual": 1,
+    "locked": 0,
+    "duration": 31.0,
+    "avg_shot_seconds": 15.5,
+    "min_shot_seconds": 6.25
+  },
+  "note": "patch",
+  "past": [
+    [
+      {
+        "index": 1,
+        "start": 1291.0,
+        "end": 1297.25,
+        "duration": 6.25,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1297.25,
+        "end": 1322.0,
+        "duration": 24.75,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "start": 1291.0,
+        "end": 1297.25,
+        "duration": 6.25,
+        "kind": "follow_person",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "manual",
+        "locked": false
+      },
+      {
+        "index": 2,
+        "start": 1297.25,
+        "end": 1322.0,
+        "duration": 24.75,
+        "kind": "follow_speaker",
+        "person": null,
+        "zoom": "auto",
+        "zoomEntry": "normal",
+        "transition": "cut",
+        "source": "auto",
+        "locked": false
+      }
+    ]
+  ],
+  "future": []
+}

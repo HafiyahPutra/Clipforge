@@ -1,0 +1,79 @@
+services:
+  clipforge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clipforge:0.1.0
+    container_name: clipforge
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      # Inside the container "localhost" is the container itself, so the host
+      # provider must be reached through host.docker.internal. Override with
+      # DOCKER_AI_BASE_URL when your provider lives on another machine.
+      AI_BASE_URL: ${DOCKER_AI_BASE_URL:-http://host.docker.internal:20128/v1}
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-}
+      AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-30}
+      AI_TEMPERATURE: ${AI_TEMPERATURE:-0.4}
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}
+      WHISPER_COMPUTE_TYPE: ${WHISPER_COMPUTE_TYPE:-int8}
+      WHISPER_BEAM_SIZE: ${WHISPER_BEAM_SIZE:-5}
+      WHISPER_VAD: ${WHISPER_VAD:-true}
+      WHISPER_LANGUAGE: ${WHISPER_LANGUAGE:-}
+      YTDLP_MAX_HEIGHT: ${YTDLP_MAX_HEIGHT:-1080}
+      YTDLP_SOCKET_TIMEOUT: ${YTDLP_SOCKET_TIMEOUT:-30}
+      YTDLP_COOKIES_FILE: ${YTDLP_COOKIES_FILE:-}
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-2048}
+      ANALYZE_CHUNK_CHARS: ${ANALYZE_CHUNK_CHARS:-6000}
+      ANALYZE_MAX_CLIPS: ${ANALYZE_MAX_CLIPS:-12}
+      FFMPEG_ENCODER: ${FFMPEG_ENCODER:-auto}
+      RENDER_FPS: ${RENDER_FPS:-30}
+      RENDER_CRF: ${RENDER_CRF:-22}
+      RENDER_PRESET: ${RENDER_PRESET:-veryfast}
+      RENDER_VIDEO_BITRATE: ${RENDER_VIDEO_BITRATE:-8M}
+      RENDER_AUDIO_BITRATE: ${RENDER_AUDIO_BITRATE:-160k}
+      RENDER_MAX_CLIPS: ${RENDER_MAX_CLIPS:-20}
+      ASSET_MAX_MB: ${ASSET_MAX_MB:-64}
+      BGM_DEFAULT_VOLUME: ${BGM_DEFAULT_VOLUME:-0.25}
+      BGM_FADE_SECONDS: ${BGM_FADE_SECONDS:-0.8}
+      VOICE_BOOST_MAX: ${VOICE_BOOST_MAX:-2.0}
+      FACE_SAMPLE_FPS: ${FACE_SAMPLE_FPS:-2.0}
+      FACE_MIN_HIT_RATIO: ${FACE_MIN_HIT_RATIO:-0.2}
+      # Phase 6 tracking pipeline: clip-type presets live in
+      # backend/services/tracking/config.py, these override the defaults for every type.
+      TRACKING_DETECT_FPS: ${TRACKING_DETECT_FPS:-10}
+      TRACKING_DEAD_ZONE: ${TRACKING_DEAD_ZONE:-}
+      TRACKING_MAX_SPEED: ${TRACKING_MAX_SPEED:-}
+      TRACKING_HOLD_FRAMES: ${TRACKING_HOLD_FRAMES:-}
+      TRACKING_SPEAKER_MIN_SWITCH: ${TRACKING_SPEAKER_MIN_SWITCH:-}
+      TRACKING_SHOT_MIN_SECONDS: ${TRACKING_SHOT_MIN_SECONDS:-}
+      TRACKING_CUT_LOOKAHEAD: ${TRACKING_CUT_LOOKAHEAD:-}
+      TRACKING_CUT_MAX_PER_MINUTE: ${TRACKING_CUT_MAX_PER_MINUTE:-}
+      TRACKING_ZOOM_STRENGTH: ${TRACKING_ZOOM_STRENGTH:-}
+      PREVIEW_WIDTH: ${PREVIEW_WIDTH:-540}
+      PREVIEW_CRF: ${PREVIEW_CRF:-30}
+      PREVIEW_PRESET: ${PREVIEW_PRESET:-ultrafast}
+      PREVIEW_MAX_SECONDS: ${PREVIEW_MAX_SECONDS:-20}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8000,http://127.0.0.1:8000}
+      ADMIN_API_KEY: ${ADMIN_API_KEY:-}
+      DATA_DIR: /app/data
+      TEMP_MAX_AGE_SECONDS: ${TEMP_MAX_AGE_SECONDS:-3600}
+      TEMP_STORAGE_QUOTA_GB: ${TEMP_STORAGE_QUOTA_GB:-5.0}
+      CLEANUP_INTERVAL_SECONDS: ${CLEANUP_INTERVAL_SECONDS:-1800}
+    volumes:
+      - ./data:/app/data
+      - ./temp:/app/temp
+      - ./exports:/app/exports
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 25s

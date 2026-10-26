@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens live here exactly as DESIGN.md §11 names them.
+ * Tailwind utilities are mapped onto them in `@theme inline`, so components ask for
+ * `bg-panel` / `text-muted` / `rounded-control` and never a raw hex or pixel value.
+ */
+
+:root {
+  /* warna dasar */
+  --bg-app: #181c22;
+  --bg-panel: #1f242c;
+  --bg-raised: #272d37;
+  --bg-sunken: #12151a;
+  --line: #343b47;
+  --line-strong: #4a5362;
+  --text: #e8ebf0;
+  --text-muted: #9ba5b5;
+  --text-faint: #6f7a8c;
+  --accent: #ffd23f;
+  --accent-ink: #1a1500;
+  --focus: #7db7ff;
+
+  /* fungsional */
+  --person-a: #4fc3c7;
+  --person-b: #e87aa4;
+  --person-c: #a58bff;
+  --person-d: #8fd16b;
+  --shot-follow: #34496b;
+  --overlap: #f5934a;
+  --ok: #6fd08c;
+  --warn: #f5b94a;
+  --error: #ff6b6b;
+  --info: #7db7ff;
+
+  /* bentuk */
+  --r-chip: 4px;
+  --r-control: 6px;
+  --r-panel: 10px;
+  --r-overlay: 14px;
+  --r-video: 6px;
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* tipografi */
+  --font-display: "Bricolage Grotesque Variable", system-ui, sans-serif;
+  --font-ui: "Instrument Sans Variable", system-ui, sans-serif;
+  --fs-caption: 11px;
+  --fs-small: 12px;
+  --fs-ui: 13px;
+  --fs-body: 14px;
+  --fs-lead: 16px;
+  --fs-title: 20px;
+  --fs-display: 28px;
+
+  /* gerak */
+  --dur: 150ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}
+
+@theme inline {
+  /* warna → bg-*, text-*, border-*, ring-* */
+  --color-app: var(--bg-app);
+  --color-panel: var(--bg-panel);
+  --color-raised: var(--bg-raised);
+  --color-sunken: var(--bg-sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-focus: var(--focus);
+
+  --color-person-a: var(--person-a);
+  --color-person-b: var(--person-b);
+  --color-person-c: var(--person-c);
+  --color-person-d: var(--person-d);
+  --color-shot-follow: var(--shot-follow);
+  --color-overlap: var(--overlap);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-error: var(--error);
+  --color-info: var(--info);
+
+  /* radius berjenjang — sengaja tidak seragam */
+  --radius-chip: var(--r-chip);
+  --radius-control: var(--r-control);
+  --radius-panel: var(--r-panel);
+  --radius-overlay: var(--r-overlay);
+  --radius-video: var(--r-video);
+
+  /* tipografi */
+  --font-display: var(--font-display);
+  --font-sans: var(--font-ui);
+
+  --text-caption: var(--fs-caption);
+  --text-caption--line-height: 16px;
+  --text-small: var(--fs-small);
+  --text-small--line-height: 16px;
+  --text-ui: var(--fs-ui);
+  --text-ui--line-height: 20px;
+  --text-body: var(--fs-body);
+  --text-body--line-height: 22px;
+  --text-lead: var(--fs-lead);
+  --text-lead--line-height: 24px;
+  --text-title: var(--fs-title);
+  --text-title--line-height: 28px;
+  --text-display: var(--fs-display);
+  --text-display--line-height: 36px;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-app font-sans text-ink antialiased;
+    font-size: var(--fs-ui);
+    line-height: 20px;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background: var(--line-strong);
+    color: var(--text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@layer utilities {
+  /* DESIGN.md §11 — angka tidak bergoyang saat berubah */
+  .timecode {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Gerak hanya untuk menjawab aksi (§8); --dur menjadi 0ms saat reduced-motion */
+  .motion-ui {
+    transition-property: color, background-color, border-color, outline-color, opacity, transform;
+    transition-duration: var(--dur);
+    transition-timing-function: var(--ease);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Arsir diagonal untuk shot whole-frame (§3.2) */
+  .hatch-whole {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(201, 206, 216, 0.25) 0 1px,
+      transparent 1px 5px
+    );
+  }
+
+  /* Arsir oranye untuk jalur overlap bicara (§3.2) */
+  .hatch-overlap {
+    background-image: repeating-linear-gradient(45deg, var(--overlap) 0 1px, transparent 1px 5px);
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "projectId": "prj_20261021_cf8f3d",
+  "clipIndex": 2,
+  "updatedAt": "2026-10-21T12:57:13+00:00",
+  "window": {
+    "start": 3105.0,
+    "end": 3135.0
+  },
+  "shots": [
+    {
+      "index": 1,
+      "start": 3105.0,
+      "end": 3135.0,
+      "duration": 30.0,
+      "kind": "follow_speaker",
+      "person": null,
+      "personId": null,
+      "frameCx": null,
+      "zoom": "auto",
+      "zoomEntry": "normal",
+      "transition": "cut",
+      "source": "auto",
+      "locked": false
+    }
+  ],
+  "summary": {
+    "shots": 1,
+    "cuts": 0,
+    "kinds": {
+      "follow_speaker": 1
+    },
+    "manual": 0,
+    "locked": 0,
+    "duration": 30.0,
+    "avg_shot_seconds": 30.0,
+    "min_shot_seconds": 30.0
+  },
+  "note": "redetect",
+  "past": [],
+  "future": []
+}

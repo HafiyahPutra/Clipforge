@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "projectId": "prj_20261021_cf8f3d",
+  "clipIndex": 2,
+  "updatedAt": "2026-10-21T12:57:06+00:00",
+  "window": {
+    "start": 3105.0,
+    "end": 3135.0
+  },
+  "state": {
+    "revision": 4,
+    "expected": 2,
+    "groups": [
+      {
+        "id": "p1",
+        "letter": "A",
+        "label": "Person A",
+        "color": "#38bdf8",
+        "ignored": false,
+        "members": [
+          {
+            "track": "A",
+            "from": null,
+            "to": null
+          }
+        ],
+        "merged_from": [],
+        "split_from": null
+      },
+      {
+        "id": "p2",
+        "letter": "B",
+        "label": "Person B",
+        "color": "#f472b6",
+        "ignored": false,
+        "members": [
+          {
+            "track": "B",
+            "from": null,
+            "to": null
+          }
+        ],
+        "merged_from": [],
+        "split_from": null
+      }
+    ]
+  },
+  "summary": {
+    "people": 2,
+    "ignored": 0,
+    "merged": 0
+  },
+  "note": "Expecting 2 people",
+  "past": [
+    {
+      "revision": 1,
+      "expected": null,
+      "groups": [
+        {
+          "id": "p1",
+          "letter": "A",
+          "label": "Person A",
+          "color": "#38bdf8",
+          "ignored": false,
+          "members": [
+            {
+              "track": "A",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        },
+        {
+          "id": "p2",
+          "letter": "B",
+          "label": "Person B",
+          "color": "#f472b6",
+          "ignored": false,
+          "members": [
+            {
+              "track": "B",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "expected": 2,
+      "groups": [
+        {
+          "id": "p1",
+          "letter": "A",
+          "label": "Person A",
+          "color": "#38bdf8",
+          "ignored": false,
+          "members": [
+            {
+              "track": "A",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        },
+        {
+          "id": "p2",
+          "letter": "B",
+          "label": "Person B",
+          "color": "#f472b6",
+          "ignored": false,
+          "members": [
+            {
+              "track": "B",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "expected": 3,
+      "groups": [
+        {
+          "id": "p1",
+          "letter": "A",
+          "label": "Person A",
+          "color": "#38bdf8",
+          "ignored": false,
+          "members": [
+            {
+              "track": "A",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        },
+        {
+          "id": "p2",
+          "letter": "B",
+          "label": "Person B",
+          "color": "#f472b6",
+          "ignored": false,
+          "members": [
+            {
+              "track": "B",
+              "from": null,
+              "to": null
+            }
+          ],
+          "merged_from": [],
+          "split_from": null
+        }
+      ]
+    }
+  ],
+  "future": []
+}
